@@ -1,0 +1,39 @@
+.login-button {
+    color: white;
+    background-color: #3877A1;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.button-header {
+    margin-right: 60px;
+    width: 118px;
+    height: 60px;
+}
+
+.button-popover {
+    width: 250px;
+    margin: 5px 5px;
+    font-size: 18px;
+}
+
+input {
+    width: 250px;
+    height: 40px;
+    margin: 5px 5px;
+    font-size: 22px;
+    border: 1px solid #D8C4C4;
+    border-radius: 4px;
+}
+input::placeholder {
+    color: #3877A1;
+    padding-left: 10px;
+    font-weight: lighter;
+
+}
+
+:host >>> .popover {
+    width: 290px;
+    border: 1px solid #D8C4C4;
+}
