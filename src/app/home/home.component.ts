@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BannerComponent } from '../banner/banner.component';
+
 
 
 @Component({

@@ -1,1 +1,8 @@
-<p>product-list works!</p>
+<div>
+    <div class="d-flex justify-content-between">
+        <h2 class="products-header">Products</h2>
+    </div>
+    <div class="product-list d-flex flex-row" *ngFor="let product of products | async">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
+</div>
