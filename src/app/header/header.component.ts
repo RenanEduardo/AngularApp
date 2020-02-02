@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import {ViewChild, ElementRef} from '@angular/core';
+import { ViewChild } from '@angular/core';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 
-import { AuthService } from '../auth.service';
+import { UserService } from '../auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -15,9 +15,10 @@ export class HeaderComponent implements OnInit {
   loginForm;
   loggedUser;
   isLoggedIn;
+  @Output() loginAction = new EventEmitter();
   @ViewChild('popOver') popover: NgbPopover;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+  constructor(private formBuilder: FormBuilder, private userService: UserService) {
     this.loginForm = this.formBuilder.group({
       email: '',
       password: ''
@@ -40,8 +41,8 @@ export class HeaderComponent implements OnInit {
   }
   onSubmit(event, values) {
     event.preventDefault();
-    this.loggedUser = this.authService.logon(values.email, values.password);
-    if(this.loggedUser) {
+    this.loggedUser = this.userService.logon(values.email, values.password);
+    if (this.loggedUser) {
       this.isLoggedIn = true;
     }
     this.closeModal();
@@ -49,5 +50,6 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.loggedUser = null;
     this.isLoggedIn = false;
+    this.userService.logout();
   }
 }

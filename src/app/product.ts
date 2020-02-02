@@ -4,5 +4,6 @@ export class Product {
     platforms: string;
     price: number;
     img: string;
+    quantityInCart: number;
     constructor(){}
 }

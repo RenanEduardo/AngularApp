@@ -3,6 +3,17 @@
     font-weight: lighter;
 }
 
-.product-list {
+.product-list{
     background-color: #FAFAFA;
+    width: 100vw;
+    padding: 60px 90px;
+}
+
+.cart{
+
+}
+
+.cart-quantity {
+    font-size: 22;
+    font-weight: lighter;
 }

@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 
-import { AuthService } from './auth.service';
+import { UserService } from './auth.service';
 import { ProductsService } from './products.service';
 
 import { BannerComponent } from './banner/banner.component';
@@ -35,7 +35,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
       { path: '', component: HomeComponent },
     ])
   ],
-  providers: [AuthService, ProductsService],
+  providers: [UserService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
