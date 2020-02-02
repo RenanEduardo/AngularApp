@@ -11,9 +11,6 @@ import { User } from '../user';
 export class ProductListComponent implements OnInit {
   loggedUser: User;
   products;
-  firstRow;
-  secondRow;
-  thirdRow;
   constructor(private productsService: ProductsService, private userService: UserService) {
     this.userService.loginAction.subscribe(res => {
       this.loggedUser = res;
@@ -30,9 +27,6 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
-    this.firstRow = this.products;
-    this.secondRow = this.products;
-    this.thirdRow = this.products;
     this.loggedUser = this.userService.getUser();
   }
   onAddToCart(product) {
