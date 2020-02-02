@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { AuthService } from './auth.service';
 import { BannerComponent } from './banner/banner.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BannerComponent } from './banner/banner.component';
     HomeComponent,
     HeaderComponent,
     BannerComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
