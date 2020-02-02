@@ -3,26 +3,29 @@
         <img src="assets/Logo.png">
         <a [routerLink]="['/']"> Products </a>
     </div>
-    <div class="mr-5">
+    
+    <div class="login-section">
+    <span *ngIf="loggedUser" class="logged-user mr-5"> Welcome {{ loggedUser.userName }}</span>
         <ng-template #popover id="login-popover">
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event,loginForm.value)">
                 <div class="d-flex flex-column align-items-center">
 
                     <div class="mt-3 mb-2">
-                        <input type="email" name="email" placeholder="E-mail" class="">
+                        <input type="email" name="email" placeholder="E-mail" formControlName="email">
                     </div>
                     <div>
-                        <input type="password" name="password" placeholder="Password" class="">
+                        <input type="password" name="password" placeholder="Password" formControlName="password">
                     </div>
                     <div>
-                        <button class="login-button button-popover">Login</button>
+                        <button class="login-button button-popover login" type="submit">Login</button>
                     </div>
                 </div>
             </form>
         </ng-template>
-        <button id="loginButton" class="login-button button-header" [ngbPopover]="popover" 
-        placement="bottom" [autoClose]="false">
+        <button *ngIf="!isLoggedIn" id="loginButton" class="login-button button-header login" #popOver="ngbPopover" [ngbPopover]="popover" 
+        placement="bottom" [autoClose]="false" triggers="manual" (click)="openModal()">
             Login
         </button>
+        <button *ngIf="isLoggedIn" id="logoutButton" class="login-button button-header logout" (click)="logout()">Logout</button>
     </div>
 </div>

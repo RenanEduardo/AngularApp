@@ -1,13 +1,27 @@
+.login-section {
+    margin-right: 10%;
+}
+
+.logged-user {
+    color: #3877A1;    
+}
+
+.logout {
+    background-color: #D55454;
+}
+
+.login{ 
+    background-color: #3877A1;
+}
+
 .login-button {
     color: white;
-    background-color: #3877A1;
     border: 1px solid #ffffff;
     border-radius: 4px;
     font-size: 18px;
 }
 
 .button-header {
-    margin-right: 60px;
     width: 118px;
     height: 60px;
 }
