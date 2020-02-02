@@ -1,0 +1,24 @@
+img {
+    width: 126px;
+    height: 145px;
+}
+
+.title, .item-total {
+    font-family: Helvetica Neue, sans-serif;
+    color: #707070;
+}
+.title {
+    font-size: 33px;
+}
+.item-total{
+    font-size: 30px;
+}
+
+.platforms {
+    font-size: 14px;
+}
+
+.cart-item {
+    width: 90%;
+    margin: 0 auto;
+}

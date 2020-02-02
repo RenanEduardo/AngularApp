@@ -1,0 +1,48 @@
+.card {
+    background-color: white;
+    width: 370px;
+    height: 540px;
+    border: 1px solid white;
+    border-radius: 1px;
+    margin: 15px 15px;
+}
+
+.title, .price {
+    font-size: 33px;
+    font-weight: normal;
+    font-style: bold;
+}
+.platforms {
+    font-size: 14px;  
+    font-weight: normal;
+    font-style: bold;  
+}
+
+.price {
+    background-color: #333333;
+    color: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.add {
+    background-color: #3877A1;  
+}
+
+.remove {
+    background-color: #D55454;
+}
+button {
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 299px;
+    height: 49px;
+}
+img {
+    width: 288px;
+    height: 333px;
+}

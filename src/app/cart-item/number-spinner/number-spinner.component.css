@@ -1,0 +1,17 @@
+button {
+    width: 38px;
+    height: 39px;
+    border: 1px solid #707070;
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+span {
+    color: #707070;
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 30px;
+    line-height: 39px;
+    margin-top: -3px;
+}

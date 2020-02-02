@@ -1,0 +1,57 @@
+.header {
+    width: 100vw;
+}
+
+.login-section {
+    margin-right: 10%;
+}
+
+.logged-user {
+    color: #3877A1;  
+}
+
+.logout {
+    background-color: #D55454;
+}
+
+.login{ 
+    background-color: #3877A1;
+}
+
+.login-button {
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.button-header {
+    width: 118px;
+    height: 60px;
+}
+
+.button-popover {
+    width: 250px;
+    margin: 5px 5px;
+    font-size: 18px;
+}
+
+input {
+    width: 250px;
+    height: 40px;
+    margin: 5px 5px;
+    font-size: 22px;
+    border: 1px solid #D8C4C4;
+    border-radius: 4px;
+}
+input::placeholder {
+    color: #3877A1;
+    padding-left: 10px;
+    font-weight: lighter;
+
+}
+
+:host >>> .popover {
+    width: 290px;
+    border: 1px solid #D8C4C4;
+}

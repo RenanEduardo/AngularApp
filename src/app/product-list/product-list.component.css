@@ -1,0 +1,22 @@
+.products-header {
+    font-size: 69px;
+    font-weight: lighter;
+}
+
+.product-list{
+    background-color: #FAFAFA;
+    width: 100vw;
+    padding: 0 30px 0 30px;
+}
+
+.cart-quantity {
+    font-size: 22;
+    font-weight: lighter;
+}
+
+@media (max-width: 700px) {
+    .products-header {
+        font-size: 39px;
+        font-weight: lighter;
+    }
+}

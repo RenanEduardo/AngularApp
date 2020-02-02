@@ -1,0 +1,23 @@
+<div class="card d-flex">
+   <div class="d-flex flex-row align-items-center justify-content-between">
+       <div class="d-flex flex-column mb-4">
+           <span class="title">{{product.title}}</span>
+           <span class="platforms">{{product.platforms}}</span>
+       </div>
+       <div>
+           <span class="price pb-3 pt-4 pl-3 pr-3">{{product.price  | currency}}</span>
+       </div>
+   </div>
+   <div class="d-flex flex-column align-items-center mt-4">
+       <div class="mb-2">
+           <img [src]="product.img">
+        </div>
+        <div *ngIf="!addedToCart">
+            <button class="add" (click)="addToCart()">Add To Cart</button>
+        </div>
+        <div *ngIf="addedToCart">
+            <button class="remove" (click)="removeFromCart()">Remove from Cart</button>
+        </div>  
+    </div>
+</div>
+
