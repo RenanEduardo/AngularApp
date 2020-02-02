@@ -17,10 +17,17 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.loggedUser = this.userService.getUser();
+    if(this.loggedUser) {
+      this.cartTotal = this.loggedUser.cart.reduce(this.cartTotalReducer, 0);
+    }
   }
 
   onCartUpdate() {
-    console.log("Cart updated");
+    this.cartTotal = this.loggedUser.cart.reduce(this.cartTotalReducer, 0);
+  }
+
+  cartTotalReducer(accumulator, currentValue) {
+    return accumulator + (currentValue.price * currentValue.quantityInCart);
   }
 
 

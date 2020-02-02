@@ -17,11 +17,15 @@ export class NumberSpinnerComponent implements OnInit {
   }
 
   onSubtract() {
-    this.newQuantity.emit(this.quantityInCart - 1);
+    if (this.quantityInCart > 0) {
+      this.newQuantity.emit(this.quantityInCart - 1);
+    }
   }
 
   onAdd() {
-    this.newQuantity.emit(this.quantityInCart + 1);
+    if (this.quantityInCart < 100) {
+      this.newQuantity.emit(this.quantityInCart + 1);
+    }
   }
 
 }

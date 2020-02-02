@@ -10,16 +10,13 @@ import { Product } from '../product';
 export class CartItemComponent implements OnInit {
   @Input() product: Product;
   @Output() cartUpdated = new EventEmitter();
-  itemTotal;
   constructor() { }
 
   ngOnInit() {
-    this.itemTotal = this.product.price;
   }
 
   onNewQuantity(value) {
     this.product.quantityInCart = value;
-    this.itemTotal = this.product.price * this.product.quantityInCart;
     this.cartUpdated.emit();
   }
 

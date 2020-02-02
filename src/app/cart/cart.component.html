@@ -1,5 +1,5 @@
 <div class="cart">
-    <div class="d-flex justify-content-lg-between">
+    <div class="mb-5">
         <h2 class="cart-header">Cart</h2>
     </div>
     <span *ngIf="!loggedUser">Cart is Empty</span>
@@ -8,7 +8,10 @@
             <app-cart-item (cartUpdated)="onCartUpdate()" [product]="product"></app-cart-item>
         </div>
     </div>
-    <div>
-        <span>{{cartTotal | currency}}</span>
+    <div *ngIf="loggedUser"  class="mt-5 mb-5 d-flex justify-content-end">
+        <div class="cart-total">
+            <span>Items Total: </span>
+            <span>{{cartTotal | currency}}</span>
+        </div>  
     </div>
 </div>

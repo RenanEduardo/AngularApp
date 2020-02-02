@@ -1,16 +1,20 @@
 
-<div class="d-flex align-items-center justify-content-between mb-3 mt-3 cart-item">
-    <div class="d-inline-flex">
-        <img [src]="product.img">
+<div class="row align-items-center mb-3">
+    <div class="col-6 d-flex">
+        <div>
+            <img [src]="product.img">
+        </div>
         <div class="ml-5">
             <p class="title mb-0">{{product.title}}</p>
             <span class="platforms">{{product.platforms}}</span>
         </div>
     </div>
-    <div class="d-inline-flex">
-        <app-number-spinner [quantityInCart]="product.quantityInCart" (newQuantity)="onNewQuantity($event)"></app-number-spinner>
-    </div>
-    <div class="d-inline-flex">
-        <span class="item-total">{{itemTotal | currency}}</span>
+    <div class="col-6 d-flex justify-content-between">
+        <div class="">
+            <app-number-spinner [quantityInCart]="product.quantityInCart" (newQuantity)="onNewQuantity($event)"></app-number-spinner>
+        </div>
+        <div class="">
+            <span class="item-total">{{product.price | currency}}</span>
+        </div>
     </div>
 </div>

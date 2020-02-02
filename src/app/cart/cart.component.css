@@ -8,3 +8,9 @@
     width: 100vw;
     padding: 60px 90px;
 }
+
+.cart-total {
+    font-family: Helvetica Neue, sans-serif;
+    color: #707070;
+    font-size: 30px;
+}
