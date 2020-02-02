@@ -15,6 +15,7 @@ import { ProductsService } from './products.service';
 import { BannerComponent } from './banner/banner.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
     BannerComponent,
     ProductListComponent,
     ProductCardComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

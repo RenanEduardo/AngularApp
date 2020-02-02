@@ -23,7 +23,6 @@ export class ProductCardComponent implements OnInit {
   }
 
   removeFromCart() {
-    this.userService.removeFromUserCart(this.product);
     this.addedToCart = this.userService.removeFromUserCart(this.product);
   }
 }

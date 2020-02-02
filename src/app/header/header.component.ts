@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   loggedUser;
   isLoggedIn;
   @Output() loginAction = new EventEmitter();
-  @ViewChild('popOver') popover: NgbPopover;
+  @ViewChild('popOver', {static: false}) popover: NgbPopover;
 
   constructor(private formBuilder: FormBuilder, private userService: UserService) {
     this.loginForm = this.formBuilder.group({
