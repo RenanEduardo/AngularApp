@@ -5,5 +5,5 @@ export class Product {
     price: number;
     img: string;
     quantityInCart: number;
-    constructor(){}
+    constructor() {}
 }

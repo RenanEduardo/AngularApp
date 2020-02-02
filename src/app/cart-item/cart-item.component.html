@@ -1,0 +1,16 @@
+
+<div class="d-flex align-items-center justify-content-between mb-3 mt-3 cart-item">
+    <div class="d-inline-flex">
+        <img [src]="product.img">
+        <div class="ml-5">
+            <p class="title mb-0">{{product.title}}</p>
+            <span class="platforms">{{product.platforms}}</span>
+        </div>
+    </div>
+    <div class="d-inline-flex">
+        <app-number-spinner [quantityInCart]="product.quantityInCart" (newQuantity)="onNewQuantity($event)"></app-number-spinner>
+    </div>
+    <div class="d-inline-flex">
+        <span class="item-total">{{itemTotal | currency}}</span>
+    </div>
+</div>

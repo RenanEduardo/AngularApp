@@ -1,15 +1,10 @@
-.products-header {
+.cart-header {
     font-size: 69px;
     font-weight: lighter;
 }
 
-.product-list{
+.cart{
     background-color: #FAFAFA;
     width: 100vw;
     padding: 60px 90px;
-}
-
-.cart-quantity {
-    font-size: 22;
-    font-weight: lighter;
 }

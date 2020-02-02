@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { ViewChild } from '@angular/core';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 
-import { UserService } from '../auth.service';
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

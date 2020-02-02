@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductsService } from '../products.service';
-import { UserService } from '../auth.service';
+import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
@@ -33,6 +33,7 @@ export class ProductListComponent implements OnInit {
     this.firstRow = this.products;
     this.secondRow = this.products;
     this.thirdRow = this.products;
+    this.loggedUser = this.userService.getUser();
   }
   onAddToCart(product) {
     console.log(product);
